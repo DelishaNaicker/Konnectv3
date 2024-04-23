@@ -8,3 +8,7 @@ menu grey: #535251
 white: #ffffff
 black: #000000
 */
+
+body {
+    font-family: "Inter"; 
+}
