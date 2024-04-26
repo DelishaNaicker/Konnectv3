@@ -128,7 +128,73 @@ let dataScience = [
     "Model deployment and productionization",
     "Cloud-based data science platforms",
     "Reproducible research and version control"
-]
+];
+/* 
+let artificialIntelligence = [
+    Natural Language Processing (NLP)
+Computer Vision
+Speech Recognition
+Expert Systems
+Robotics
+Knowledge Representation
+Cognitive Computing
+Neural Networks
+Fuzzy Logic
+Genetic Algorithms
+Reinforcement Learning
+Expert Systems
+Autonomous Vehicles
+Swarm Intelligence
+Sentiment Analysis
+Emotion Recognition
+Planning and Scheduling
+Machine Reasoning
+AI Ethics and Bias
+AI Governance and Regulation
+AI in Healthcare
+AI in Finance
+AI in Education
+AI in Business Process Automation
+AI in Cybersecurity
+AI in Gaming
+AI in Agriculture
+AI-powered Chatbots and Virtual Assistants
+Explainable AI (XAI)
+AI Safety and Control Measures
+];
+
+let machineLearning = [
+    Supervised Learning
+Unsupervised Learning
+Semi-supervised Learning
+Reinforcement Learning
+Deep Learning
+Support Vector Machines (SVM)
+Decision Trees
+Random Forests
+Naive Bayes Classifier
+K-Nearest Neighbors (KNN)
+Clustering Algorithms (K-Means, Hierarchical Clustering)
+Dimensionality Reduction (PCA, t-SNE)
+Ensemble Learning
+Gradient Boosting Machines (GBM)
+Neural Networks (Feedforward, Convolutional, Recurrent)
+Transfer Learning
+Model Evaluation Metrics (Accuracy, Precision, Recall, F1 Score, ROC Curve, etc.)
+Cross-validation Techniques
+Hyperparameter Tuning
+Bias-Variance Tradeoff
+Overfitting and Underfitting
+Feature Engineering
+Model Deployment Strategies
+Explainability and Interpretability of Machine Learning Models
+Time Series Forecasting
+Anomaly Detection
+Recommender Systems
+Association Rule Learning (Apriori, FP-growth)
+Machine Learning Pipelines
+Automated Machine Learning (AutoML)
+]; */
 
 let availableKeywords = webDevelopment.concat(cloudComputing).concat(dataScience);
 
