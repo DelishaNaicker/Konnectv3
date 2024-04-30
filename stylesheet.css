@@ -268,124 +268,90 @@ button .fa-solid {
 
 * {box-sizing:border-box}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 500px;
-  position: relative;
-  margin: auto;
-  size-adjust: 80px;
-  width: max-content;
+/* Add these styles to your existing CSS file */
+.register {
+  display: block;
+  width: 200px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  text-align: center;
+  line-height: 50px; /* Align text vertically */
+  font-size: 20px; /* Adjust font size as needed */
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  position: absolute;
+  bottom: 20px; /* Adjust distance from bottom */
+  left: 20px; /* Adjust distance from left */
+  z-index: 1; /* Ensure it's above the slideshow */
 }
 
-/* Hide the images by default */
+.column {
+  position: relative;
+  float: center;
+  width: 50%; /* Adjust width as needed */
+  float: none; /* Remove float */
+  width: auto; /* Adjust width as needed */
+  margin: auto; /* Center horizontally */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-10%);
+  cursor: pointer;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+  z-index: 1; /* Ensure it's above the slideshow */
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.slideshow-container {
+  max-width: 800px; /* Adjust max-width as needed */
+  position: relative;
+  margin: auto;
+  size: 50%;
+}
+
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: fit-content;
-  margin-top: -22px;
-  padding: 6px;
-  color: white;
-  font-weight: bold;
-  font-size: 25px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  margin-bottom: 100px;
-  margin: 20px;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: -0;
-  border-radius: 3px 0 0 3px;
-  margin: 10px;
-  padding: 50px;
-}
-.prev{
-  left:-0;
-  border-radius: 3px 0 0 3px;
-  margin: 10px;
-  padding: 50px;
-}
-
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-  float: right;
-}
-/* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+  animation: fade 1.5s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px;
-    size-adjust: 50%;
-    float: left;
+  from {
+      opacity: 0.4;
   }
-  
-  /*
-  a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  */
 
-  .register {
-    background-color: #00275E;
-    color: white;
-    size: 80%;
-    float: left;
+  to {
+      opacity: 1;
   }
-  /* Create four equal columns that floats next to each other */
-.column-left {
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-right: 200px; /* Margin to push the card to the far right */
+  width: 300px; /* Fixed width for the card */
   float: right;
-  width: 20%;
-  padding: 90px;
-  height: 250px;
-  margin-top: 0%;
-  position: relative;
-  
+  margin-top: 100px;
 }
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.head{
+  background-color: #fff;
+  text-align-last: right;
+  height: 20vh;
 }
-
