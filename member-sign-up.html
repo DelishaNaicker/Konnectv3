@@ -4,12 +4,65 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="stylesheet.css" rel="stylesheet">
+
+<script>
+    function signUp() {
+        // Get the input values
+        var firstName = document.getElementsByName("name")[0].value;
+        var lastName = document.getElementsByName("surname")[0].value;
+        var email = document.getElementsByName("email")[0].value;
+        var password = document.getElementsByName("password")[0].value;
+ 
+        // Check if any field is empty
+        if (firstName === "" || lastName === "" || email === "" || password === "") {
+            alert("Please fill in all fields.");
+        } else if (!isValidEmail(email)) {
+            alert("Please enter a valid email address from Gmail, iCloud, or Outlook.");
+        } else {
+            // Submit the form
+            alert("Signed up!");
+        }
+    }
+ 
+    function isValidEmail(email) {
+        // Regular expression to match Gmail, iCloud, or Outlook emails
+        var regex = /^(?=.*\@)(?=.*\.)(?=.*\b(gmail|icloud|outlook)\b).+$/;
+        return regex.test(email);
+    }
+</script>
 <title>Page Title</title>
 </head>
 <body>
+    <section class="signUp" id="sign-up">
+        <div class="signUp-container">
+            <div class="main-title">
+                <h2>Sign Up<span class="bg-text"></span></h2>
+            </div>
+            <div class="signUp">
+                <div class="signUp">
+                    <h5>Sign up here</h5>
+                    
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+    <div class="sign-up">
+        <form action="https://formsubmit.com/Konnect@gmail.com" method="POST"> 
+          
+             <div class="input-control 1">
+                <input type="text" required="" placeholder="First Name" name="name">
+                <input type="email" required="" placeholder="Last Name" name="surname">
+            </div>
+            <div class="input-control 2">
+                <input type="text" required="" placeholder="Email address" name="email">
+            </div>
+            <div class="input-control 2">
+                <input type="text" required="" placeholder="Password" name="password">
+            </div>
 
+            <input type="button" value="Sign Up" id="sign-up" onclick="signUp()">
+            <br><br>
+    <div class="single-line">
+    <a href="">Already signed up?</a> &emsp;<a href="sign-in.html">Sign In</a> 
+    
+</div>
+</form>
 </body>
 </html>
