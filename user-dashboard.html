@@ -7,97 +7,87 @@
     <title>Page Title</title>
 </head>
 <body>
-
+  
 <!-- Load Font Awesome Icon Library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Buttons to choose list or grid view -->
 <button onclick="listView()"><i class="fa fa-bars"></i> List</button>
-<button onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
-
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2>Column 1</h2>
-    
-    Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
-Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
- 
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
-Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
-
-  </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
-    Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
-Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
- 
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
-Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
-
-  </div>
+<button onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button><br><br>
+<img src="OIP (1).jpg" alt="Sunset" width="700" height="400">
+<!-- Card container -->
+<div class="card">
+  <h2>GROUPS</h2>
+    <div class="row">
+        <div class="column" style="background-color:#eeeaec;">
+          <h2>CloudComputing</h2>
+          <input type="checkbox" id="myCheck1" onclick="myFunction()">
+            <p id="text1" style="display:none">Checkbox is CHECKED!</p>
+           
+        </div>  
+        <div class="column" style="background-color:#bbb;">
+            <h2>Web development</h2>
+            <input type="checkbox" id="myCheck2" onclick="myFunction()">
+            <p id="text2" style="display:none">Checkbox is CHECKED!</p>
+           
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" style="background-color:#ccc;">
+            <h2>Machine Learning</h2>
+            <input type="checkbox" id="myCheck3" onclick="myFunction()">
+            <p id="text3" style="display:none">Checkbox is CHECKED!</p>
+           
+        </div>
+        <div class="column" style="background-color:#ddd;">
+            <h2>Artificial Inteligence</h2>
+            <input type="checkbox" id="myCheck4" onclick="myFunction()">
+            <p id="text4" style="display:none">Checkbox is CHECKED!</p>
+            
+        </div>
+        <div class="column" style="background-color:#ddd;">
+          <h2>Data Science</h2>
+          <input type="checkbox" id="myCheck4" onclick="myFunction()">
+          <p id="text4" style="display:none">Checkbox is CHECKED!</p>
+        
+      </div>
+    </div>
 </div>
 
-<div class="row">
-  <div class="column" style="background-color:#ccc;">
-    <h2>Column 3</h2>
-    Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
-Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
- 
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
-Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
+<script>
+    // Get the elements with class="column"
+    var elements = document.getElementsByClassName("column");
 
-  </div>
-  <div class="column" style="background-color:#ddd;">
-    <h2>Column 4</h2>
-    Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
-Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
- 
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
-Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
+    // Declare a loop variable
+    var i;
 
-  </div>
-</div>
-    <script>
-  
-        // Get the elements with class="column"
-var elements = document.getElementsByClassName("column");
+    // List View
+    function listView() {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].style.width = "100%";
+        }
+    }
 
-// Declare a loop variable
-var i;
+    // Grid View
+    function gridView() {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].style.width = "50%";
+        }
+    }
 
-// List View
-function listView() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.width = "100%";
-  }
-}
+    function myFunction() {
+        // Get the checkbox ID and corresponding text ID
+        var checkboxId = this.id;
+        var textId = "text" + checkboxId.substring(7); // Extracting the number part from checkbox ID
 
-// Grid View
-function gridView() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.width = "50%";
-  }
-}
-function myFunction() {
-  // Get the checkbox
-  var checkBox = document.getElementById("myCheck");
-  // Get the output text
-  var text = document.getElementById("text");
+        // Get the checkbox and corresponding text elements
+        var checkBox = document.getElementById(checkboxId);
+        var text = document.getElementById(textId);
 
-  // If the checkbox is checked, display the output text
-  
-  }
-
-
-    </script>
+        // Toggle the display of the text based on checkbox state
+        text.style.display = checkBox.checked ? "block" : "none";
+    }
+</script>
 
 </body>
 </html>
