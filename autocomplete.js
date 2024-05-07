@@ -242,4 +242,17 @@ function selectInput(list) {
         let newTabUrl = urlStart.toString() + "/data-science-group.html"
         window.open(newTabUrl)
         };
-}
+    if (artificialIntelligence.includes(inputBox.value)) {
+        console.log(currentUrl);
+        let urlStart = currentUrl.substring(0, currentUrl.lastIndexOf('/'));    
+        let newTabUrl = urlStart.toString() + "/artificial-intelligence-group.html"
+        window.open(newTabUrl)
+        };
+    if (machineLearning.includes(inputBox.value)) {
+        console.log(currentUrl);
+        let urlStart = currentUrl.substring(0, currentUrl.lastIndexOf('/'));    
+        let newTabUrl = urlStart.toString() + "/machine-learning-group.html"
+        window.open(newTabUrl)
+        };
+    }
+

@@ -9,13 +9,19 @@ white: #ffffff
 black: #000000
 */
 
-/* Index Page */
+body {
+  font-family: "Inter"; 
+}
+
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Index Page */
+
 
   .homepage-button {
     background-color: #1C191A;
@@ -24,9 +30,6 @@ black: #000000
     border: none;
     outline:none;
   }
-  /* body {
-    font-family: 'Montserrat', sans-serif;
-  } */
 
   .navigation-bar {
     font-size: 18px;
@@ -146,15 +149,10 @@ black: #000000
     padding-left: 50px;
     padding-top: 50px;
   }
-  
-  
+
   /* End of index */
   
-  body {
-    font-family: "Inter"; 
-    background-color: #07A5C3;
-  }
-  
+/* Start of Explore Groups*/ 
   .flex-container {
     display: flex;
     flex-direction: row;
@@ -167,6 +165,7 @@ black: #000000
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: 35px;
   }
   
   .explore-buttons {
@@ -174,9 +173,13 @@ black: #000000
     margin:2vw;
     cursor: url(images/konnect-cursor.cur),auto;
     /*cursor: pointer;*/
-    border-radius: 10%;
+    border-radius: 8%;
+    transition: transform .2s;
   }
-  
+
+  .explore-buttons:hover {
+    transform: scale(1.06);
+  }
   /*search bar styling - START*/
   .searchbox {
     width: 40vw;
@@ -203,7 +206,7 @@ black: #000000
     color: #333;
   }
   
-  /* button {
+  .search-button {
     background: #07A5C3;
     padding: 13px;
     border-radius: 50%;
@@ -211,12 +214,12 @@ black: #000000
     outline: 0;
   }
   
-  button .fa-solid {
+  .search-button .fa-solid {
     width: 25px;
     color: #fff;
     font-size:22px;
     cursor: pointer;
-  } */
+  } 
   
   .resultbox ul {
     padding-inline-start: 4px;
@@ -243,7 +246,8 @@ black: #000000
   }
   
   /*search bar styling - END*/
-  
+  /*End of Explore groups*/
+
   /*about page styling - START */
   .vert-text {
     margin-top: 15vh;
@@ -284,22 +288,77 @@ black: #000000
     margin-right: 10vw;
   }
   /*about page styling - END */
-  /*about page styling - END */
   
-  * {box-sizing:border-box}
-  
-  /* Slideshow container */
-  .slideshow-container {
-    max-width: 500px;
-    position: relative;
-    margin: auto;
-    size-adjust: 80px;
-    width: max-content;
+  /*user pages styling - START*/
+
+  .userhp-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto 20px;
   }
+  
+  .userhp-item1 {
+    grid-column: 1 / 7;
+    grid-row: 1;
+    color:#1C191A;
+    font-size: 40px;
+    text-align: right;
+    background-color: #f2f2f2;
+    padding: 40px;
+  }
+  
+  .userhp-item2 {
+    background-color: #00275E;
+    grid-column: 1 / 4;
+    grid-row: 2;
+    height: 85vh;
+  }
+  
+  .userhp-item3 {
+    grid-column: 4 / 6;
+    grid-row: 2;
+    background-color: #f4b324;
+  }
+  
+  .userhp-item4 {
+    grid-column: 6;
+    grid-row: 2;
+    background-color: #07A5C3;
+  }
+
+  .userhp-item5 {
+    grid-column: 1/7;
+    grid-row: 3;
+  }
+
+  .userhp-register {
+    font-size: 25px;
+    background-color: transparent;
+    color: #f2f2f2;
+    padding: 10px;
+    border:solid 3px;
+    border-radius: 20px;
+    outline:none;
+  }
+
+
+
+
+
+  /* Slideshow container */
   
   /* Hide the images by default */
   .mySlides {
     display: none;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
   }
   
   /* Next & previous buttons */
@@ -312,7 +371,7 @@ black: #000000
     padding: 6px;
     color: white;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 80px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -321,24 +380,18 @@ black: #000000
   }
   
   /* Position the "next button" to the right */
-  .next {
+   .next {
     right: -0;
     border-radius: 3px 0 0 3px;
     margin: 10px;
     padding: 50px;
   }
   .prev{
-    left:-0;
+    right:800px+10%;
     border-radius: 3px 0 0 3px;
     margin: 10px;
     padding: 50px;
-  }
-  
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
+  }  
   
   /* Caption text */
   .text {
@@ -361,15 +414,7 @@ black: #000000
     float: right;
   }
   /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+
   /* a {
       text-decoration: none;
       display: inline-block;

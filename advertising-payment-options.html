@@ -3,13 +3,13 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Empty Box</title>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+     <link rel="icon" type="image/x-icon" href="/images/logo nobg.png">
+     <title>Payment Plans</title>
     <style>
            body {
                font-family: Arial, sans-serif;
                background-color: white;
-             }
-          .center-box {
                 position: fixed;
                 top: 50%;
                 left: 50%;
@@ -17,9 +17,7 @@
                 width: 900px; 
                height: 530px; 
                background-color: #07a5c3;
-               border: 2px solid #333;
                border-radius: 10px;
-               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                padding: 20px;
                box-sizing: border-box;
              }
@@ -231,8 +229,8 @@
     </style>
 </head>
 <body>
-  <div class="center-box">
     <h1>Want to <span>Advertise</span> your Event<br> on Konnect?</h1>
+
     <div class="center-wrapper">
       <div class="container">
         <h1 id="centered-p" class="basicPrice">$15.99</h1>
@@ -278,18 +276,17 @@
         <p class="para">Number of members: <span class="no">2034</span></p>
     </div>
     </div>
-  </div>
   <script>
    const toggleCheckbox = document.getElementById('toggleCheckbox');
 toggleCheckbox.addEventListener('change', function() {
   const basicPrice = document.querySelector('.basicPrice');
   const proPrice = document.querySelector('.proPrice');
   if (toggleCheckbox.checked) {
-    basicPrice.textContent = '$190.99';
-    proPrice.textContent = '$310.99';
+    basicPrice.textContent = '$19.99';
+    proPrice.textContent = '$190.99';
   } else {
     basicPrice.textContent = '$15.99';
-    proPrice.textContent = '$25.99';
+    proPrice.textContent = '$150.99';
   }
 });
 
