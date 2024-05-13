@@ -3,7 +3,88 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="stylesheet.css" rel="stylesheet">
+    <style>body {
+        font-family: "Inter";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+     
+    /* Resetting default margin and padding */
+     body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    
+    .signUp {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px white;
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+     
+    }
+    
+    
+    .main-title h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .main-title span {
+      color: #07A5C3;
+    }
+    .input-control {
+      display: flex; 
+      margin-bottom: 15px;
+      flex-direction: row;
+      align-items: center; 
+    }
+    
+    
+    .input-control input {
+      flex: 1;
+      padding: 8px; 
+      width: calc(50% - 5px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    
+    
+    
+    #sign-up {
+      background-color: #07A5C3;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    
+    .single-line {
+      text-align: center;
+    }
+    
+    .single-line a {
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .single-line a:hover {
+      text-decoration: underline;
+    } 
+     </style>
 
 <script>
     function signUp() {
@@ -61,6 +142,16 @@
             <br><br>
     <div class="single-line">
     <a href="">Already signed up?</a> &emsp;<a href="sign-in.html">Sign In</a> 
+    
+    <div class="footer">
+        <b>	Follow me on </b>
+        <div class="icons">
+        <a href="https://github.com/kvaibhav01" target="_blank" class="social"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/vaibhavkhulbe143/" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/vaibhav_khulbe" target="_blank" class="social"><i class="fab fa-twitter-square"></i></a>
+        <a href="https://linkedin.com/in/vaibhav-khulbe/" target="_blank" class="social"><i class="fab fa-linkedin"></i></a>
+        </div>
+        </div>
     
 </div>
 </form>
