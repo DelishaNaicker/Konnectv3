@@ -3,21 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>body {
-        font-family: "Inter";
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link href="stylesheet.css" rel="stylesheet">
+    <style>
      
     /* Resetting default margin and padding */
-     body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
     
     .signUp {
       background-color: white;
@@ -111,49 +101,94 @@
         return regex.test(email);
     }
 </script>
-<title>Page Title</title>
+<title>Register Now</title>
+<link rel="icon" type="image/x-icon" href="/images/logo nobg.png">
 </head>
+<header>
+  <nav class="navigation-bar">
+      <span class="toggle-button">&#9776;</span>
+      <a href="#" class="Capalogo"><img src="Images/Klogo.png" height = "60px" padding="0"></a> 
+          <ul class="main-menu">
+          <li><a href="index.html" class="menu-item">Home</a></li>
+          <li><a href="about.html" class="menu-item">About</a></li>
+          <li><a href="explore-groups.html" class="menu-item">Explore</a></li>
+          <li><a href="member-sign-up.html" class="menu-item">Login</a></li>
+      </ul>
+      <script src="script.js"></script>
+  </nav>
+
+</header>
+
 <body>
-    <section class="signUp" id="sign-up">
-        <div class="signUp-container">
-            <div class="main-title">
-                <h2>Sign Up<span class="bg-text"></span></h2>
-            </div>
-            <div class="signUp">
-                <div class="signUp">
-                    <h5>Sign up here</h5>
-                    
+<div class="sign-up-grid-container">
+  <div class="form-item">
+              <img id=profile-img src="/images/user-profile-image.jpg"> 
+              <div class="main-title">
+                  <h2>Sign Up<span class="bg-text"></span></h2>
+              </div>
+                      
+      <div class="sign-up">
+          <form action="https://formsubmit.com/Konnect@gmail.com" method="POST"> 
+            
+              <div class="input-control 1">
+                  <input type="text" required="" placeholder="First Name" name="name">
+                  <input type="email" required="" placeholder="Last Name" name="surname">
+              </div>
+              <div class="input-control 2">
+                  <input type="text" required="" placeholder="Email address" name="email">
+              </div>
+              <div class="input-control 2">
+                  <input type="text" required="" placeholder="Password" name="password">
+              </div>
 
-    <div class="sign-up">
-        <form action="https://formsubmit.com/Konnect@gmail.com" method="POST"> 
-          
-             <div class="input-control 1">
-                <input type="text" required="" placeholder="First Name" name="name">
-                <input type="email" required="" placeholder="Last Name" name="surname">
-            </div>
-            <div class="input-control 2">
-                <input type="text" required="" placeholder="Email address" name="email">
-            </div>
-            <div class="input-control 2">
-                <input type="text" required="" placeholder="Password" name="password">
-            </div>
+              <input type="button" value="Sign Up" id="sign-up" onclick="signUp()">
+              <br><br>
+          </form>
+      <div class="single-line">
+      Already signed up? &emsp;<a href="sign-in.html">Sign In</a> 
+  </div>
+</div>
+</div>
+  <div class="sign-up-banner" style="background-color: #07A5C3;">
+    <h1 style="font-size: 65px; margin:45px"><i>Register now for<br><b>FREE!</b></i></h1>
+  </div>
+  <div class="sign-up-info">
+    <div class="advert-text">
+    <p>As a member of Konnect, you can:</p>
+      <ul style="padding-left: 0;">
+        <li style="list-style-position: inside;">Join as many groups as you want!</li>
+        <li style="list-style-position: inside;">View all upcoming events that relate to your interests</li>
+        <li style="list-style-position: inside;">Get notified of all the latest events</li>
+        <li style="list-style-position: inside;">Register for an event at the click of a button</li>
+      </ul>
+    </div>
 
-            <input type="button" value="Sign Up" id="sign-up" onclick="signUp()">
-            <br><br>
-    <div class="single-line">
-    <a href="">Already signed up?</a> &emsp;<a href="sign-in.html">Sign In</a> 
+      <button class="signup-explore-button" style="margin-left: 30px; margin-bottom: 40px">Explore Groups</button>
+
+      <p>Want to advertise an event? <a href="advertising-payment-options.html">Click here.</a></p>
+
+    </p>
+  </div>
+
+</div>
+
     
-    <div class="footer">
+    
+    <!-- <div class="footer">
         <b>	Follow me on </b>
         <div class="icons">
         <a href="https://github.com/kvaibhav01" target="_blank" class="social"><i class="fab fa-github"></i></a>
         <a href="https://www.instagram.com/vaibhavkhulbe143/" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
         <a href="https://twitter.com/vaibhav_khulbe" target="_blank" class="social"><i class="fab fa-twitter-square"></i></a>
         <a href="https://linkedin.com/in/vaibhav-khulbe/" target="_blank" class="social"><i class="fab fa-linkedin"></i></a>
-        </div>
-        </div>
+        </div> -->
+        
     
 </div>
 </form>
 </body>
+<footer>
+  <p>© 2024 CAPA KONNECT. All Rights Reserved.</p>
+</footer>
+
 </html>
